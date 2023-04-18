@@ -11,7 +11,7 @@
 </head>
 <body>
     <!--  NAVBAR  -->
-    <nav>
+    <nav class="navbar">
         <input type="checkbox" id="check">
         <label for="check" class="checkbtn">
             <i class="fas fa-bars"></i>
@@ -19,13 +19,78 @@
         <label class="logo">NEAT</label>
         <ul>
           <li><a href="#">Accueil</a></li>
-          <li><a href="#">Notre produit</a></li>
-          <li><a href="#">Télécharger</a></li>
-          <li><a href="#">Á propos</a></li>
+          <li><a href="#nproduit">Notre produit</a></li>
+          <li><a href="#download">Télécharger</a></li>
+          <li><a href="#docs">Documentation</a></li>
+          <li><a href="#about">Á propos</a></li>
         </ul>
     </nav>
 
 
+    <!--  HOME  -->
+    <div id="container-bg">
+        <h1 id="name">NEAT</h1>
+        <span id="catch-phrase">Nettoyez votre PC en un clic</span>
+        <a href="#download" class="btn" id="btn-home-download">Télécharger</a>
+        <img src="./img/home-bg.jpg" id="bg-img" />
+    </div>
+
+    
+    <!--  Notre produit  -->
+    <h1 id="nproduit" class="section-title">Notre produit</h1>
+    <p id="np-par">
+        <span style="
+            font-weight:bold;
+            font-size: 23px;
+            color: blue;
+            ">NEAT</span> est un logiciel Open Source codé en <b>Python</b>, <br />
+        l'outil représente un moyen de nettoyage de <br />
+        fichiers et de dossiers inutiles sur un ordinateur <br />
+        sous les différents systèmes d’exploitation : <br />
+        <span style="
+            font-weight: bold;
+            font-style: italic;
+            color: blue;
+        ">Windows / Linux / MacOS</span>. <br />
+        Il effectue un nettoyage pour certains répertoires <br />
+        en supprimant les <em>fichiers en double</em>, les <em>dossiers vides</em> <br /> 
+        et les <em>fichiers temporaires</em> et <em>en cache</em>. Il est simple <br /> 
+        à utiliser et peut aider les utilisateurs à gagner de <br /> 
+        l'espace de stockage sur leur ordinateur en supprimant <br />
+        les fichiers inutiles.
+        <br />
+        <br />
+
+        Son script est facilement personnalisable grâce à la liste <br />
+        des répertoires à nettoyer qu’on peut choisir et ajouter <br />
+        en ajoutant juste son chemin d’emplacement.<br />
+        De plus, il affiche une notification via la bibliothèque <br />
+        <b>ToastNotifier</b> de Python pour informer l'utilisateur <br />
+        que le nettoyage a été effectué avec succès.
+        <br />
+        <br />
+        En somme, cet outil est un moyen simple et efficace <br />
+        de nettoyer les fichiers inutiles de votre ordinateur, <br />
+        ce qui peut contribuer à améliorer les performances de votre système.
+        <br />
+        <br />
+        Soyez efficace et organisé grâce à notre outil de nettoyage puissant et rapide.
+    </p>
+    <img src="./img/gallery-ab.jpg" id="img-app" />
+
+
+    <!--  Télécharger  -->
+    <h1 id="download" class="section-title">Télécharger</h1>
+    <a href="" target="_blank" class="btn" download="neat">Télécharger</a>
+    
+
+    <!--  Documentation  -->
+    <h1 id="docs" class="section-title">Documentation</h1>
+
+
+
+    <!--  À propos  -->
+    <h1 id="about" class="section-title">À propos</h1>
 
     <script src="./src/script.js"></script>
 </body>
