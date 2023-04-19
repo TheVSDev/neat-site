@@ -38,7 +38,7 @@
     
     <!--  NOTRE PRODUIT  -->
     <h1 id="nproduit" class="section-title">Notre produit</h1>
-    <p id="np-par">
+    <p class="par">
         <span style="
             font-weight:bold;
             font-size: 23px;
@@ -86,6 +86,79 @@
 
     <!--  DOCUMENTATION  -->
     <h1 id="docs" class="section-title">Documentation</h1>
+
+    <p class="par">
+        <span style="
+            font-weight:bold;
+            font-size: 23px;
+            color: blue;
+            ">NEAT
+        </span>  est nettoyage de fichiers et de dossiers basé sur un code qui vise à libérer de l'espace disque en supprimant les fichiers inutiles. Le script est écrit en Python et utilise plusieurs modules Python pour effectuer diverses tâches.
+            <br /><br />
+
+            Le script commence par importer plusieurs modules Python, notamment le module <b>os</b> pour travailler avec le système de fichiers, le module <b>time</b> pour faire une pause dans l'exécution du script, le module <b>datetime</b> pour formater la date et l'heure, et le module <b>win10toast</b> pour Windows et subprocess pour MacOs (Ce qui est différent sur Linux) pour afficher une notification à l'utilisateur à la fin du script.
+            <br /><br />
+            <img src="./img/code/imports.png" style="width:350px;" class="img-code" />
+            <br />
+            <br />
+            <br />
+            <br />
+
+            Le code définit également plusieurs variables pour le chemin absolu des répertoires à nettoyer et le chemin absolu du fichier journal où les actions effectuées par le script sont enregistrées.
+            <br /><br />
+            <img src="./img/code/var.png" style="width:450px;" class="img-code" />
+            <br />
+            <br />
+            <br />
+            <br />
+
+            Le script commence par supprimant les fichiers en double en utilisant un dictionnaire pour stocker les hachages des fichiers. Le script parcourt ensuite chaque fichier dans les répertoires spécifiés, calcule son hachage et vérifie si ce hachage a déjà été rencontré. Si un hachage de fichier est en double, le script supprime le fichier et enregistre l'action dans le fichier journal. Dans le cas contraire, le hachage du fichier est ajouté au dictionnaire.
+            <br /><br />
+            <img src="./img/code/double.png" style="width:850px;" class="img-code" />
+            <br />
+            <br />
+            <br />
+            <br />
+
+            Le script supprime ensuite les dossiers vides dans les répertoires spécifiés. Pour cela, il parcourt chaque répertoire et vérifie si le répertoire est vide. Si tel est le cas, le script supprime le répertoire et enregistre l'action dans le fichier journal.
+            <br /><br />
+            <img src="./img/code/vides.png" style="width:850px;" class="img-code" />
+            <br />
+            <br />
+            <br />
+            <br />
+
+            Enfin, le script supprime les fichiers temporaires et en cache en parcourant chaque fichier dans les répertoires spécifiés et en vérifiant si le fichier se termine par <code>.tmp</code>. Si c'est le cas, le script supprime le fichier et enregistre l'action dans le journal. Si le fichier ne peut pas être supprimé, une entrée d'erreur est enregistrée dans le journal.
+            <br /><br />
+            <img src="./img/code/tmpcache.png" style="width:850px;" class="img-code" />
+            <br />
+            <br />
+            <br />
+            <br />
+            
+            Le script se termine en affichant un message de fin de nettoyage et en affichant une notification à l'utilisateur à l'aide du module <b>win10toast</b> pour Windows, <b>subprocess</b> pour MacOs et un simple <b>print</b> pour Linux.
+            <br /><br />
+            <img src="./img/code/notif.png" style="width:650px;" class="img-code" />
+            <br />
+            <br />
+            <br />
+            <br />
+            Il est important de noter que le script doit être exécuté avec des autorisations d'administrateur pour supprimer des fichiers et des dossiers. Il est également important de noter que le script supprimera des fichiers et des dossiers de manière permanente, il est donc recommandé de sauvegarder les fichiers importants avant d'exécuter le script.
+            <br />
+            L'outil de nettoyage de répertoires est un excellent moyen de maintenir un espace de travail propre et organisé. Cependant, comme avec tout logiciel, les utilisateurs peuvent rencontrer des problèmes lors de l'exécution de ce script. Voici quelques problèmes courants et les solutions pour les résoudre.
+            <br /><br />
+            Le premier problème courant est que le l’outil ne supprime pas certains fichiers temporaires ou en cache. Si le script ne parvient pas à supprimer ces fichiers, cela peut entraîner un désordre dans l'espace de travail. Pour résoudre ce problème, vous pouvez d'abord vérifier que les fichiers en question sont bien des fichiers temporaires ou en cache. Si tel est le cas, vous pouvez essayer de fermer les applications qui utilisent ces fichiers avant de relancer le script de nettoyage.
+            <br />
+            Le deuxième problème courant est lié aux autorisations. Il est possible que le script ne puisse pas supprimer certains fichiers en raison de restrictions d'autorisations. Pour résoudre ce problème, vous pouvez utiliser l’outil en tant qu'administrateur ou vous assurer que vous avez donné les autorisations nécessaires pour supprimer ces fichiers.
+            <br />
+            Le troisième problème courant est lié à la suppression accidentelle de fichiers importants. Bien que le script soit conçu pour supprimer les fichiers en double et les fichiers temporaires, il est possible que vous puissiez accidentellement supprimer des fichiers importants. Pour éviter cela, vous pouvez créer une liste de fichiers à ne pas supprimer et les exclure du processus de nettoyage.
+            <br /><br />
+            Enfin, il est important de noter que ce script peut prendre du temps pour s'exécuter, en fonction de la quantité de données à traiter. Il est donc recommandé de ne pas lancer l’outil pendant que vous travaillez sur d'autres tâches, car cela peut ralentir votre système.
+            <br /><br />
+            Pour utiliser correctement cet outil de nettoyage de répertoires, il est recommandé de suivre les étapes suivantes : Tout d'abord, vous devez spécifier les chemins absolus des répertoires que vous souhaitez nettoyer et que vous soyez sur de vos chemins. Ensuite, vous pouvez lancer l’outil vi son interface. Une fois le l’opération est terminée, vous pouvez vérifier le journal pour voir les fichiers et les dossiers qui ont été supprimés. Il est également recommandé de vérifier régulièrement le journal pour vous assurer que l’outil fonctionne correctement.
+            <br /><br />
+            En conclusion, cet outil de nettoyage de répertoires est un excellent moyen de maintenir un espace de travail propre et organisé. Bien qu'il puisse y avoir des problèmes courants, en suivant les étapes recommandées et en comprenant les solutions aux problèmes courants, vous pouvez utiliser cet outil efficacement et en toute sécurité.
+    </p>
 
 
 

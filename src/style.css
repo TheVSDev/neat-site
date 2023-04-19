@@ -163,9 +163,9 @@ a.active,a:hover {
 }
 
 
-/* --- NOTRE PRODUIT--- */
-#np-par {
-    padding: 40px;
+/* --- NOTRE PRODUIT --- */
+.par {
+    padding: 50px;
     line-height: 32px;
 }
 
@@ -176,7 +176,7 @@ a.active,a:hover {
     left: 850px;
 }
 
-/* --- TÉLÉCHARGER--- */
+/* --- TÉLÉCHARGER --- */
 .btn {
   align-items: center;
   appearance: none;
@@ -220,4 +220,18 @@ a.active,a:hover {
 .btn:active {
   box-shadow: #3c4fe0 0 3px 7px inset;
   transform: translateY(2px);
+}
+
+
+/* --- DOCUMENTATION --- */
+.code {
+  background-color: #33322e;
+  color: #12c730;
+  padding: 10px;
+  margin-left: 60px;
+  margin-top: 1px;
+}
+
+.img-code {
+  border-radius: 5px;
 }
