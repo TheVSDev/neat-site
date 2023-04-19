@@ -222,6 +222,45 @@ a.active,a:hover {
   transform: translateY(2px);
 }
 
+.single-price {
+  width: 33%;
+  background: var(--darker-background);
+  float: left;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  box-shadow: 1px 1px 20px rgba(0,0,0,0.5);
+  text-align: center;
+  transition: 0.9s;
+}
+
+.single-price:hover {
+  background: var(--lighter-foreground);
+  color: #fff;
+  box-shadow: 0 0 15px rgba(0,0,0,1);
+  transform: scale(1.1);
+  z-index: 1;
+  border-radius: 25px;
+}
+
+.deals {
+  margin-top: 10%;
+}
+
+.deals p {
+  font-size: 14px;
+  font-weight: normal;
+  text-align: center;
+  color: #fff;
+}
+
+.single-price h1 {
+  font-size: 30px;
+  color: #fff;
+  line-height: 3;
+  text-transform: uppercase;
+}
+
+
 
 /* --- DOCUMENTATION --- */
 .code {
