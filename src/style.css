@@ -286,3 +286,65 @@ a.active,a:hover {
 .img-code {
   border-radius: 5px;
 }
+
+
+
+/* --- À PROPOS --- */
+.profils {
+  width: 33%;
+  background: white;
+  float: left;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  text-align: center;
+  transition: 0.9s;
+}
+
+.profils:hover {
+  background: #ebebeb;
+  color: #fff;
+  box-shadow: 0 0 15px rgba(0,0,0,1);
+  transform: scale(1.1);
+  z-index: 1;
+  border-radius: 25px;
+}
+
+.profil-description {
+  margin-top: 10%;
+}
+
+.profil-description p {
+  font-size: 19px;
+  font-weight: normal;
+  text-align: center;
+  color: #111;
+  font-family: poppins;
+}
+
+.profils h1 {
+  font-size: 30px;
+  color: #111;
+  line-height: 3;
+  text-transform: uppercase;
+}
+
+.avatars {
+  width: 150px;
+  border-radius: 20px;
+}
+
+#about-desc {
+  padding: 40px;
+}
+
+#about-title {
+  font-size: 37px;
+  font-family: Poppins;
+  padding: 40px;
+}
+
+.about-techs {
+  width: 200px;
+  padding: 40px;
+  margin-left: 50px;
+}
